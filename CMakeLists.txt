@@ -13,7 +13,21 @@ project ("Veilbound")
 find_package(raylib CONFIG REQUIRED)
 
 # Add source to this project's executable.
-add_executable (Veilbound "Veilbound.cpp" "Veilbound.h")
+add_executable (Veilbound 
+"Veilbound.cpp" 
+"Veilbound.h" 
+
+"shared/CardInstance.h" 
+"shared/CardDefinition.h"
+"shared/Player.h" 
+"shared/CardDatabase.h"
+
+"game/Gamestate.h" 
+"game/Gamestate.cpp"
+"game/Row.cpp"
+"game/Row.h"
+"game/GamePhase.h" "shared/CardDatabase.h")
+
 target_link_libraries(Veilbound PRIVATE raylib)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
